@@ -14,9 +14,9 @@ Tugas Kelompok dibuat oleh kelompok DO1 yang beranggotakan sebagai berikut.
 ## :rocket: [APK Link](LINK MENYUSUL)
 
 ## 📲 Deskripsi Aplikasi 📲
-◽ Nama aplikasi :
+◽ Nama aplikasi : re.cycle
 
-◽ Fungsi aplikasi :
+◽ Fungsi aplikasi : 
 
 ◽ Peran atau aktor pengguna aplikasi  :
 
