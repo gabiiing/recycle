@@ -17,8 +17,11 @@ Tugas Kelompok dibuat oleh kelompok DO1 yang beranggotakan sebagai berikut.
 ◽ Nama aplikasi : re.cycle
 
 ◽ Fungsi aplikasi : 
+Re.cycle adalah sebuah platform yang memberikan informasi terkait daur ulang sampah dan mengajak masyarakat untuk mengurangi jumlah pencemaran dengan cara melakukan daur ulang sampah. Melalui aplikasi yang dibuat ini, masyarakat Indonesia diharapkan dapat mengakses website re.cycle secara mobile melalui smartphone. Dengan demikian, keterlibatan masyarakat Indonesia lebih meningkat dalam mengikuti event daur ulang demi keberlanjutan linkungan indonesia.
 
 ◽ Peran atau aktor pengguna aplikasi  :
+1. User : 
+2. Admin 
 
 ## 🗃️ Daftar Modul yang akan Diimplementasikan 🗃️
 
