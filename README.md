@@ -24,7 +24,14 @@ Re.cycle adalah sebuah platform yang memberikan informasi terkait daur ulang sam
 2. Admin 
 
 ## 🗃️ Daftar Modul yang akan Diimplementasikan 🗃️
+1. Landing Page 
+2. Register dan Login page
+3. Profile Page
+4. About Us Page
+5. Event Page - Menambahkan event
+6. Event Page - Detail & Forum Event
 
 ## 💱 Alur pengintegrasian dengan web service 💱
+
 
 ## 🔰Tools🔰
