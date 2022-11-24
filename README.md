@@ -32,6 +32,15 @@ Re.cycle adalah sebuah platform yang memberikan informasi terkait daur ulang sam
 6. Event Page - Detail & Forum Event
 
 ## 💱 Alur pengintegrasian dengan web service 💱
+◽ Mendefinisikan model class sesuai dengan response data yang akan diambil ketika melakukan pemanggilan *web service*.
+
+◽ Menambahkan *keyword* `required` pada setiap parameter class pada bagian constructor.
+
+◽ Membuat fungsi untuk melakukan fetching data dari web service kemudian mengiterasi serta menampilkan setiap data ke aplikasi dengan memanfaatkan FutureBuilder.
+
+◽ Setiap data di-fetch melalui HTTP GET request yang melakukan pengambilan data dari URL yang diinginkan dan mengembalikan sebuah response dengan menggunakan metode http.get.
+
+◽ Response tersebut akan dikonversi menjadi Dart object. Untuk setiap object tersebut akan dilakukan looping dan disimpan pada sebuah list. Selain itu, iterasi dari list tersebut digunakan untuk menampilkan data pada flutter.
 
 
 ## 🔰Tools🔰
