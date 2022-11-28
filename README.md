@@ -18,11 +18,11 @@ Tugas Kelompok dibuat oleh kelompok DO1 yang beranggotakan sebagai berikut.
 
 ◽ **Fungsi aplikasi :**
 
-Platform (Website dan Mobile App) **re.cycle** diharapkan dapat membantu banyak pihak dalam memberikan informasi terkait daur ulang sampah dan mengajak masyarakat untuk mengurangi jumlah pencemaran dengan cara melakukan daur ulang sampah. Melalui aplikasi yang dibuat ini, masyarakat Indonesia diharapkan dapat mengakses website **re.cycle** secara mobile melalui *smartphone*. Selain itu, platform kami juga menyediakan forum bagi pengguna yang memiliki pertanyaan seputar kegiatan penghijauan dimana pertanyaan tersebut bisa dijawab oleh pengguna lain yang sekiranya tahu atau pernah mengalami apa yang ditanyakan tersebut. Dengan demikian, keterlibatan masyarakat Indonesia lebih meningkat dalam mengikuti *event* daur ulang demi keberlanjutan lingkungan Indonesia.
+Platform (Website dan Mobile App) **re.cycle** diharapkan dapat membantu banyak pihak dalam memberikan informasi terkait daur ulang sampah dan mengajak masyarakat untuk mengurangi jumlah pencemaran dengan cara melakukan daur ulang sampah. Melalui aplikasi yang dibuat ini, masyarakat Indonesia diharapkan dapat mengakses website **re.cycle** secara mobile melalui *smartphone*. Selain itu, platform kami juga menyediakan forum bagi pengguna yang memiliki pertanyaan seputar kegiatan penghijauan atau pelestarian lingkungan dimana pertanyaan tersebut bisa dijawab oleh pengguna lain yang sekiranya tahu atau pernah mengalami apa yang ditanyakan tersebut. Dengan demikian, keterlibatan masyarakat Indonesia dalam mengikuti *event* daur ulang dapat lebih meningkat demi menjaga dan melestarikan lingkungan sekitar.
 
 ◽ **Peran atau aktor pengguna aplikasi  :**
 
-1. **User**, pengguna yang mengakses page pada aplikasi recycle.
+1. **User**, pengguna yang mengakses halaman pada aplikasi re.cycle.
 2. **Manager** **Event**, pengguna yang menyelenggarakan event.
 3. **Admin**, pengguna yang memiliki akses penuh terhadap aplikasi.
 
@@ -34,11 +34,13 @@ Platform (Website dan Mobile App) **re.cycle** diharapkan dapat membantu banyak 
     3. **Events**: mengarah ke page daftar event<br>
     4. **Admin**: mengarah ke page admin<br>
     5. **About Us**: mengarah ke page about us page<br>
+    6. **Profile**: mengarah ke page profile page<br>
 2. **About Us page (Sayyid)**: Halaman ini berisi kontributor dan peranannya dalam mengembangkan website. User dapat memberikan kritik/saran kepada para kontributor.
 3. **Register dan  Login  Page (Alifia)**: Halaman untuk pendaftaran dan autentikasi user. Logged-in user akan memperoleh pesan "Anda sudah melakukan login" jika membuka page register/login. 
 5. **Admin page (Febi)**: Halaman untuk memberikan serta menampilkan *feedback* untuk admin dan/atau para kontributor.
 6. **Event Page - Daftar Event (User) dan Create Event (Manager) (Gabriel)**: Halaman ini berisi tampilan daftar event pemanfaatan barang bekas yang sedang berlangsung, akan berlangsung, dan telah berlangsung. Manager event dapat membuat event baru.
 7. **Event Page - Detail & Forum Event (Muflih)**: Halaman ini berisi tampilan detail event beserta forum untuk berdiskusi mengenai event tersebut. User dapat me-*reply* comment user lain pada forum tersebut.
+8. **Profile Page (Alifia)**: Halaman ini berisi tampilan dari detail user yang sudah melakukan Login pada aplikasi re.cycle.
 
 ## 💱 Alur pengintegrasian dengan web service 💱
 ◽ Mendefinisikan model class sesuai dengan response data yang akan diambil ketika melakukan pemanggilan *web service*. Pendefinisian model akan disesuaikan dengan modul yang diimplementasikan per anggota kelompok.
