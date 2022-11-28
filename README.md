@@ -27,12 +27,14 @@ Platform (Website dan Mobile App) **re.cycle** diharapkan dapat membantu banyak 
 3. **Admin**, pengguna yang bertugas untuk mengontrol keseluruhan app termasuk konten dari event page (menghapus event dan sebagainya).
 
 ## 🗃️ Daftar Modul yang akan Diimplementasikan 🗃️
-1. **Landing Page (Alfredo)**: Halaman ini berisi deskripsi atau penjelasan singkat tentang daur ulang, manfaat daur ulang, testimoni, dan navbar (navbar juga akan digunakan di semua page). Terdapat juga *section* bagi para User untuk bertanya mengenai daur ulang.
-    #### Navigation Bar pada Flutter
+1. **Landing Page (Alfredo)**: Halaman ini berisi deskripsi atau penjelasan singkat tentang daur ulang, manfaat daur ulang, testimoni, dan drawer menu. Terdapat juga *section* bagi para User untuk bertanya mengenai daur ulang.
+    #### Drawer/List Menu pada Flutter
     1. **Register**: mengarah ke page register<br>
     2. **Login**: mengarah ke page login<br>
     3. **Events**: mengarah ke page daftar event<br>
-    4. **About Us**: mengarah ke page about us page<br>
+    4. **Admin**: mengarah ke page admin<br>
+    5. **Profil** : mengarah ke page profil<br>
+    6. **About Us**: mengarah ke page about us page<br>
 2. **About Us page (Sayyid)**: Halaman ini berisi kontributor dan peranannya dalam mengembangkan website. User dapat memberikan kritik/saran kepada para kontributor.
 3. **Register, Login page dan Profil Page (Alifia)**: Halaman untuk pendaftaran dan autentikasi user. Logged-in user akan memperoleh pesan "Anda sudah melakukan login" jika membuka page register/login. Selain itu, akan ada page untuk menampilkan daftar user dalam aplikasi re.cycle
 5. **Admin page (Febi)**: Halaman untuk membuat todo-list proyek bagi para admin. Juga, halaman memberikan feedback untuk admin dan/atau para kontributor.
