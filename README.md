@@ -22,9 +22,9 @@ Platform (Website dan Mobile App) **re.cycle** diharapkan dapat membantu banyak 
 
 ◽ **Peran atau aktor pengguna aplikasi  :**
 
-1. **User**, pengguna yang mengakses halaman app kita. User dapat melihat event yang berlangsung.
+1. **User**, pengguna yang mengakses page pada aplikasi recycle.
 2. **Manager** **Event**, pengguna yang menyelenggarakan event.
-3. **Admin**, pengguna yang bertugas untuk mengontrol keseluruhan app termasuk konten dari event page (menghapus event dan sebagainya).
+3. **Admin**, pengguna yang memiliki akses penuh terhadap aplikasi.
 
 ## 🗃️ Daftar Modul yang akan Diimplementasikan 🗃️
 1. **Landing Page (Alfredo)**: Halaman ini berisi deskripsi atau penjelasan singkat tentang daur ulang, manfaat daur ulang, testimoni, dan drawer menu. Terdapat juga *section* bagi para User untuk bertanya mengenai daur ulang.
