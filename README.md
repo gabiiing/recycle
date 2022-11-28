@@ -43,9 +43,9 @@ Platform (Website dan Mobile App) **re.cycle** diharapkan dapat membantu banyak 
 
 ◽ Menambahkan *keyword* `required` pada setiap parameter class pada bagian constructor sehingga terbentuk sebuah model yang merupakan suatu model yang merepresentasikan response dari pemanggilan *web service*.
 
-◽ Setiap modul akan terintegrasi dengan database django yang berasal dari website Flutter pada Mobile App, kemudian dilanjutkan dengan membuat sebuah API yang dapat mengembalikan response dalam bentuk JSON. Dengan menggunakan method *GET* akan menampilkan data dan mengirim input dengan method *POST* untuk update data baru, serta diintegrasi dengan konsep async HTTP. 
+◽ Setiap modul akan terintegrasi dengan database django yang berasal dari website Flutter pada Mobile App, kemudian dilanjutkan dengan membuat sebuah API yang dapat mengembalikan response dalam bentuk JSON. Dengan menggunakan method **GET** akan menampilkan data dan mengirim input dengan method **POST** untuk update data baru, serta diintegrasi dengan konsep async HTTP. 
 
-◽ Membuat fungsi untuk melakukan fetching data dari *web service* kemudian mengiterasi serta menampilkan setiap data ke aplikasi dengan memanfaatkan `FutureBuilder`. Setiap data di-fetch melalui HTTP *GET* request yang melakukan pengambilan data dari URL yang diinginkan dan mengembalikan sebuah response dengan menggunakan metode `http.get`.
+◽ Membuat fungsi untuk melakukan fetching data dari *web service* kemudian mengiterasi serta menampilkan setiap data ke aplikasi dengan memanfaatkan `FutureBuilder`. Setiap data di-fetch melalui HTTP **GET** request yang melakukan pengambilan data dari URL yang diinginkan dan mengembalikan sebuah response dengan menggunakan metode `http.get`.
 
 ◽ Response tersebut akan dikonversi menjadi Dart object. Untuk setiap object tersebut akan dilakukan looping dan disimpan pada sebuah list. Selain itu, iterasi dari list tersebut digunakan untuk menampilkan data pada flutter kemudian disimpan ke dalam database.
 
