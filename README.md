@@ -27,7 +27,7 @@ Platform (Website dan Mobile App) **re.cycle** diharapkan dapat membantu banyak 
 3. **Admin**, pengguna yang bertugas untuk mengontrol keseluruhan app termasuk konten dari event page (menghapus event dan sebagainya).
 
 ## 🗃️ Daftar Modul yang akan Diimplementasikan 🗃️
-1. **Landing Page (Alfredo) **: Halaman ini berisi deskripsi atau penjelasan singkat tentang daur ulang, manfaat daur ulang, testimoni, dan navbar (navbar juga akan digunakan di semua page). Terdapat juga *section* bagi para User untuk bertanya mengenai daur ulang.
+1. **Landing Page (Alfredo)**: Halaman ini berisi deskripsi atau penjelasan singkat tentang daur ulang, manfaat daur ulang, testimoni, dan navbar (navbar juga akan digunakan di semua page). Terdapat juga *section* bagi para User untuk bertanya mengenai daur ulang.
     #### Navigation Bar pada Flutter
     1. **Register**: mengarah ke page register<br>
     2. **Login**: mengarah ke page login<br>
