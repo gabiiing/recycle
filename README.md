@@ -23,7 +23,7 @@ Platform (Website dan Mobile App) **re.cycle** diharapkan dapat membantu banyak 
 ◽ **Peran atau aktor pengguna aplikasi  :**
 
 1. **User**, pengguna yang mengakses halaman app kita. User dapat melihat event yang berlangsung.
-2. **Manager** **Event**, pengguna yang menyelenggarakan event
+2. **Manager** **Event**, pengguna yang menyelenggarakan event.
 3. **Admin**, pengguna yang bertugas untuk mengontrol keseluruhan app termasuk konten dari event page (menghapus event dan sebagainya).
 
 ## 🗃️ Daftar Modul yang akan Diimplementasikan 🗃️
