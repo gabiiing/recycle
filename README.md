@@ -11,7 +11,7 @@ Tugas Kelompok dibuat oleh kelompok DO1 yang beranggotakan sebagai berikut.
 - Gabriel Zebaoth Krisopras Putra - 2106751480
 - Sayyid Hafidzurrahman Atstsaqofi - 2106651925
 
-## 🚀
+## :rocket: [Railway Link](https://pbp-d01.up.railway.app/)
 
 ## 📲 Deskripsi Aplikasi 📲
 ◽ **Nama aplikasi :** re.cycle
@@ -23,27 +23,31 @@ Platform (Website dan Mobile App) re.cycle diharapkan dapat membantu banyak piha
 ◽ **Peran atau aktor pengguna aplikasi  :**
 
 1. User : 
-2. Admin 
+2. Admin  :
 
 ## 🗃️ Daftar Modul yang akan Diimplementasikan 🗃️
-1. Landing Page 
-2. Register dan Login page
-3. Profile Page
-4. About Us Page
-5. Event Page - Menambahkan event
-6. Event Page - Detail & Forum Event
+1. **Landing Page**: Halaman ini berisi deskripsi atau penjelasan singkat tentang daur ulang, manfaat daur ulang, testimoni, dan navbar (navbar juga akan digunakan di semua page). Terdapat juga *section* bagi para User untuk bertanya mengenai daur ulang.
+    #### Navbar
+    1. **Register**: mengarah ke page register<br>
+    2. **Login**: mengarah ke page login<br>
+    3. **Events**: mengarah ke page daftar event<br>
+    4. **About Us**: mengarah ke page about us page<br><br>
+2. **About Us page**: Halaman ini berisi kontributor dan peranannya dalam mengembangkan website. User dapat memberikan kritik/saran kepada para kontributor.
+3. **Register dan Login page**: Halaman untuk pendaftaran dan autentikasi user. Logged-in user akan memperoleh pesan "Anda sudah melakukan login" jika membuka page register/login.
+4. **Admin page**: Halaman untuk menambah dan menghapus daftar event (hanya dapat diakses oleh user admin).
+5. **Event Page - Daftar Event dan Tambah, Hapus, Update & Edit Event (Manager)**: Halaman ini berisi tampilan daftar event pemanfaatan barang bekas yang sedang berlangsung, akan berlangsung, dan telah berlangsung. Manager event dapat membuat, menghapus, menandai selesai, dan mengedit event yang diadakan pada suatu page tertentu. User dapat bergabung ke event yang sedang atau akan berlangsung. Kemudian, user akan *redirect* ke modul nomor 6.
+6. **Event Page - Detail & Forum Event**: Halaman ini berisi tampilan detail event beserta forum untuk berdiskusi mengenai event tersebut. User dapat me-*reply* comment user lain pada forum tersebut.
 
 ## 💱 Alur pengintegrasian dengan web service 💱
-◽ Mendefinisikan model class sesuai dengan response data yang akan diambil ketika melakukan pemanggilan *web service*. Dalam hal ini, pendefinisian model akan disesuaikan dengan modul yang diimplementasikan per anggota kelompok.
+◽ Mendefinisikan model class sesuai dengan response data yang akan diambil ketika melakukan pemanggilan *web service*. Pendefinisian model akan disesuaikan dengan modul yang diimplementasikan per anggota kelompok.
 
 ◽ Menambahkan *keyword* `required` pada setiap parameter class pada bagian constructor sehingga terbentuk sebuah model yang merupakan suatu model yang merepresentasikan response dari pemanggilan *web service*.
 
-◽ Membuat fungsi untuk melakukan fetching data dari web service kemudian mengiterasi serta menampilkan setiap data ke aplikasi dengan memanfaatkan FutureBuilder.
+◽ Setiap modul akan terintegrasi dengan database django yang berasal dari website Flutter pada Mobile App, kemudian dilanjutkan dengan membuat sebuah API yang dapat mengembalikan response dalam bentuk JSON. Dengan menggunakan method *GET* akan menampilkan data dan mengirim input dengan method *POST* untuk update data baru, serta diintegrasi dengan konsep async HTTP. 
 
-◽ Setiap data di-fetch melalui HTTP GET request yang melakukan pengambilan data dari URL yang diinginkan dan mengembalikan sebuah response dengan menggunakan metode http.get.
+◽ Membuat fungsi untuk melakukan fetching data dari *web service* kemudian mengiterasi serta menampilkan setiap data ke aplikasi dengan memanfaatkan `FutureBuilder`. Setiap data di-fetch melalui HTTP *GET* request yang melakukan pengambilan data dari URL yang diinginkan dan mengembalikan sebuah response dengan menggunakan metode `http.get`.
 
-◽ Response tersebut akan dikonversi menjadi Dart object. Untuk setiap object tersebut akan dilakukan looping dan disimpan pada sebuah list. Selain itu, iterasi dari list tersebut digunakan untuk menampilkan data pada flutter.
-
+◽ Response tersebut akan dikonversi menjadi Dart object. Untuk setiap object tersebut akan dilakukan looping dan disimpan pada sebuah list. Selain itu, iterasi dari list tersebut digunakan untuk menampilkan data pada flutter kemudian disimpan ke dalam database.
 
 ## 🔰Tools🔰
 ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
