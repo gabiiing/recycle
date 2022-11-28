@@ -36,7 +36,7 @@ Platform (Website dan Mobile App) **re.cycle** diharapkan dapat membantu banyak 
     5. **About Us**: mengarah ke page about us page<br>
 2. **About Us page (Sayyid)**: Halaman ini berisi kontributor dan peranannya dalam mengembangkan website. User dapat memberikan kritik/saran kepada para kontributor.
 3. **Register dan  Login  Page (Alifia)**: Halaman untuk pendaftaran dan autentikasi user. Logged-in user akan memperoleh pesan "Anda sudah melakukan login" jika membuka page register/login. 
-5. **Admin page (Febi)**: Halaman untuk membuat todo-list proyek bagi para admin. Juga, halaman memberikan feedback untuk admin dan/atau para kontributor.
+5. **Admin page (Febi)**: Halaman untuk memberikan serta menampilkan *feedback* untuk admin dan/atau para kontributor.
 6. **Event Page - Daftar Event (User) dan Create Event (Manager) (Gabriel)**: Halaman ini berisi tampilan daftar event pemanfaatan barang bekas yang sedang berlangsung, akan berlangsung, dan telah berlangsung. Manager event dapat membuat event baru.
 7. **Event Page - Detail & Forum Event (Muflih)**: Halaman ini berisi tampilan detail event beserta forum untuk berdiskusi mengenai event tersebut. User dapat me-*reply* comment user lain pada forum tersebut.
 
