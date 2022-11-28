@@ -46,3 +46,4 @@ Platform (Website dan Mobile App) re.cycle diharapkan dapat membantu banyak piha
 
 
 ## 🔰Tools🔰
+![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
