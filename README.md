@@ -34,10 +34,10 @@ Platform (Website dan Mobile App) **re.cycle** diharapkan dapat membantu banyak 
     3. **Events**: mengarah ke page daftar event<br>
     4. **About Us**: mengarah ke page about us page<br>
 2. **About Us page**: Halaman ini berisi kontributor dan peranannya dalam mengembangkan website. User dapat memberikan kritik/saran kepada para kontributor.
-3. **Register dan Login page**: Halaman untuk pendaftaran dan autentikasi user. Logged-in user akan memperoleh pesan "Anda sudah melakukan login" jika membuka page register/login.
-4. **Admin page**: Halaman untuk menambah dan menghapus daftar event (hanya dapat diakses oleh user admin).
-5. **Event Page - Daftar Event dan Tambah, Hapus, Update & Edit Event (Manager)**: Halaman ini berisi tampilan daftar event pemanfaatan barang bekas yang sedang berlangsung, akan berlangsung, dan telah berlangsung. Manager event dapat membuat, menghapus, menandai selesai, dan mengedit event yang diadakan pada suatu page tertentu. User dapat bergabung ke event yang sedang atau akan berlangsung. Kemudian, user akan *redirect* ke modul nomor 6.
-6. **Event Page - Detail & Forum Event**: Halaman ini berisi tampilan detail event beserta forum untuk berdiskusi mengenai event tersebut. User dapat me-*reply* comment user lain pada forum tersebut.
+3. **Register, Login page dan Profil Page**: Halaman untuk pendaftaran dan autentikasi user. Logged-in user akan memperoleh pesan "Anda sudah melakukan login" jika membuka page register/login. Selain itu, akan ada page untuk menampilkan daftar user dalam aplikasi re.cycle
+5. **Admin page**: Halaman untuk membuat todo-list bagi para admin. Juga, halaman untuk menampung kritik dan saran dari para admin.
+6. **Event Page - Daftar Event dan Create (Manager)**: Halaman ini berisi tampilan daftar event pemanfaatan barang bekas yang sedang berlangsung, akan berlangsung, dan telah berlangsung. Manager event dapat membuat event baru.
+7. **Event Page - Detail & Forum Event**: Halaman ini berisi tampilan detail event beserta forum untuk berdiskusi mengenai event tersebut. User dapat me-*reply* comment user lain pada forum tersebut.
 
 ## 💱 Alur pengintegrasian dengan web service 💱
 ◽ Mendefinisikan model class sesuai dengan response data yang akan diambil ketika melakukan pemanggilan *web service*. Pendefinisian model akan disesuaikan dengan modul yang diimplementasikan per anggota kelompok.
