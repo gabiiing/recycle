@@ -27,17 +27,17 @@ Platform (Website dan Mobile App) **re.cycle** diharapkan dapat membantu banyak 
 3. **Admin**, pengguna yang bertugas untuk mengontrol keseluruhan app termasuk konten dari event page (menghapus event dan sebagainya).
 
 ## 🗃️ Daftar Modul yang akan Diimplementasikan 🗃️
-1. **Landing Page**: Halaman ini berisi deskripsi atau penjelasan singkat tentang daur ulang, manfaat daur ulang, testimoni, dan navbar (navbar juga akan digunakan di semua page). Terdapat juga *section* bagi para User untuk bertanya mengenai daur ulang.
+1. **Landing Page (Alfredo) **: Halaman ini berisi deskripsi atau penjelasan singkat tentang daur ulang, manfaat daur ulang, testimoni, dan navbar (navbar juga akan digunakan di semua page). Terdapat juga *section* bagi para User untuk bertanya mengenai daur ulang.
     #### Navigation Bar pada Flutter
     1. **Register**: mengarah ke page register<br>
     2. **Login**: mengarah ke page login<br>
     3. **Events**: mengarah ke page daftar event<br>
     4. **About Us**: mengarah ke page about us page<br>
-2. **About Us page**: Halaman ini berisi kontributor dan peranannya dalam mengembangkan website. User dapat memberikan kritik/saran kepada para kontributor.
-3. **Register, Login page dan Profil Page**: Halaman untuk pendaftaran dan autentikasi user. Logged-in user akan memperoleh pesan "Anda sudah melakukan login" jika membuka page register/login. Selain itu, akan ada page untuk menampilkan daftar user dalam aplikasi re.cycle
-5. **Admin page**: Halaman untuk membuat todo-list bagi para admin. Juga, halaman untuk menampung kritik dan saran dari para admin.
-6. **Event Page - Daftar Event dan Create (Manager)**: Halaman ini berisi tampilan daftar event pemanfaatan barang bekas yang sedang berlangsung, akan berlangsung, dan telah berlangsung. Manager event dapat membuat event baru.
-7. **Event Page - Detail & Forum Event**: Halaman ini berisi tampilan detail event beserta forum untuk berdiskusi mengenai event tersebut. User dapat me-*reply* comment user lain pada forum tersebut.
+2. **About Us page (Sayyid)**: Halaman ini berisi kontributor dan peranannya dalam mengembangkan website. User dapat memberikan kritik/saran kepada para kontributor.
+3. **Register, Login page dan Profil Page (Alifia)**: Halaman untuk pendaftaran dan autentikasi user. Logged-in user akan memperoleh pesan "Anda sudah melakukan login" jika membuka page register/login. Selain itu, akan ada page untuk menampilkan daftar user dalam aplikasi re.cycle
+5. **Admin page (Febi)**: Halaman untuk membuat todo-list bagi para admin. Juga, halaman untuk menampung kritik dan saran dari para admin.
+6. **Event Page - Daftar Event (User) dan Create (Manager) (Gabriel)**: Halaman ini berisi tampilan daftar event pemanfaatan barang bekas yang sedang berlangsung, akan berlangsung, dan telah berlangsung. Manager event dapat membuat event baru.
+7. **Event Page - Detail & Forum Event (Muflih)**: Halaman ini berisi tampilan detail event beserta forum untuk berdiskusi mengenai event tersebut. User dapat me-*reply* comment user lain pada forum tersebut.
 
 ## 💱 Alur pengintegrasian dengan web service 💱
 ◽ Mendefinisikan model class sesuai dengan response data yang akan diambil ketika melakukan pemanggilan *web service*. Pendefinisian model akan disesuaikan dengan modul yang diimplementasikan per anggota kelompok.
