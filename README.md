@@ -1,5 +1,5 @@
 <div align="center" style="padding-bottom: 10px">
-<h1>🎐Tugas Kelompok PBP-D UTS Kelompok D01 T.A. 2022/2023🎐</h1>
+<h1>🎐Tugas Kelompok PBP-D UAS Kelompok D01 T.A. 2022/2023🎐</h1>
 </div>
 
 ## 🐱‍💻 Nama Anggota Kelompok 🐱‍💻
