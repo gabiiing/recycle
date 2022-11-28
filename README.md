@@ -14,11 +14,11 @@ Tugas Kelompok dibuat oleh kelompok DO1 yang beranggotakan sebagai berikut.
 ## :rocket: [Railway Link](https://pbp-d01.up.railway.app/)
 
 ## 📲 Deskripsi Aplikasi 📲
-◽ **Nama aplikasi :** re.cycle
+◽ **Nama aplikasi :** **re.cycle**
 
 ◽ **Fungsi aplikasi :**
 
-Platform (Website dan Mobile App) re.cycle diharapkan dapat membantu banyak pihak dalam memberikan informasi terkait daur ulang sampah dan mengajak masyarakat untuk mengurangi jumlah pencemaran dengan cara melakukan daur ulang sampah. Melalui aplikasi yang dibuat ini, masyarakat Indonesia diharapkan dapat mengakses website re.cycle secara mobile melalui *smartphone*. Selain itu, platform kami juga menyediakan forum bagi pengguna yang memiliki pertanyaan seputar kegiatan penghijauan dimana pertanyaan tersebut bisa dijawab oleh pengguna lain yang sekiranya tahu atau pernah mengalami apa yang ditanyakan tersebut. Dengan demikian, keterlibatan masyarakat Indonesia lebih meningkat dalam mengikuti *event* daur ulang demi keberlanjutan lingkungan Indonesia.
+Platform (Website dan Mobile App) **re.cycle** diharapkan dapat membantu banyak pihak dalam memberikan informasi terkait daur ulang sampah dan mengajak masyarakat untuk mengurangi jumlah pencemaran dengan cara melakukan daur ulang sampah. Melalui aplikasi yang dibuat ini, masyarakat Indonesia diharapkan dapat mengakses website **re.cycle** secara mobile melalui *smartphone*. Selain itu, platform kami juga menyediakan forum bagi pengguna yang memiliki pertanyaan seputar kegiatan penghijauan dimana pertanyaan tersebut bisa dijawab oleh pengguna lain yang sekiranya tahu atau pernah mengalami apa yang ditanyakan tersebut. Dengan demikian, keterlibatan masyarakat Indonesia lebih meningkat dalam mengikuti *event* daur ulang demi keberlanjutan lingkungan Indonesia.
 
 ◽ **Peran atau aktor pengguna aplikasi  :**
 
@@ -27,11 +27,11 @@ Platform (Website dan Mobile App) re.cycle diharapkan dapat membantu banyak piha
 
 ## 🗃️ Daftar Modul yang akan Diimplementasikan 🗃️
 1. **Landing Page**: Halaman ini berisi deskripsi atau penjelasan singkat tentang daur ulang, manfaat daur ulang, testimoni, dan navbar (navbar juga akan digunakan di semua page). Terdapat juga *section* bagi para User untuk bertanya mengenai daur ulang.
-    #### Navbar
+    #### Navigation Bar pada Flutter
     1. **Register**: mengarah ke page register<br>
     2. **Login**: mengarah ke page login<br>
     3. **Events**: mengarah ke page daftar event<br>
-    4. **About Us**: mengarah ke page about us page<br><br>
+    4. **About Us**: mengarah ke page about us page<br>
 2. **About Us page**: Halaman ini berisi kontributor dan peranannya dalam mengembangkan website. User dapat memberikan kritik/saran kepada para kontributor.
 3. **Register dan Login page**: Halaman untuk pendaftaran dan autentikasi user. Logged-in user akan memperoleh pesan "Anda sudah melakukan login" jika membuka page register/login.
 4. **Admin page**: Halaman untuk menambah dan menghapus daftar event (hanya dapat diakses oleh user admin).
