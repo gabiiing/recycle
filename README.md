@@ -11,15 +11,17 @@ Tugas Kelompok dibuat oleh kelompok DO1 yang beranggotakan sebagai berikut.
 - Gabriel Zebaoth Krisopras Putra - 2106751480
 - Sayyid Hafidzurrahman Atstsaqofi - 2106651925
 
-## :rocket: [APK Link](LINK MENYUSUL)
+## 🚀
 
 ## 📲 Deskripsi Aplikasi 📲
-◽ Nama aplikasi : re.cycle
+◽ **Nama aplikasi :** re.cycle
 
-◽ Fungsi aplikasi : 
-Re.cycle adalah sebuah platform yang memberikan informasi terkait daur ulang sampah dan mengajak masyarakat untuk mengurangi jumlah pencemaran dengan cara melakukan daur ulang sampah. Melalui aplikasi yang dibuat ini, masyarakat Indonesia diharapkan dapat mengakses website re.cycle secara mobile melalui smartphone. Dengan demikian, keterlibatan masyarakat Indonesia lebih meningkat dalam mengikuti event daur ulang demi keberlanjutan linkungan indonesia.
+◽ **Fungsi aplikasi :**
 
-◽ Peran atau aktor pengguna aplikasi  :
+Platform (Website dan Mobile App) re.cycle diharapkan dapat membantu banyak pihak dalam memberikan informasi terkait daur ulang sampah dan mengajak masyarakat untuk mengurangi jumlah pencemaran dengan cara melakukan daur ulang sampah. Melalui aplikasi yang dibuat ini, masyarakat Indonesia diharapkan dapat mengakses website re.cycle secara mobile melalui *smartphone*. Selain itu, platform kami juga menyediakan forum bagi pengguna yang memiliki pertanyaan seputar kegiatan penghijauan dimana pertanyaan tersebut bisa dijawab oleh pengguna lain yang sekiranya tahu atau pernah mengalami apa yang ditanyakan tersebut. Dengan demikian, keterlibatan masyarakat Indonesia lebih meningkat dalam mengikuti *event* daur ulang demi keberlanjutan lingkungan Indonesia.
+
+◽ **Peran atau aktor pengguna aplikasi  :**
+
 1. User : 
 2. Admin 
 
@@ -32,9 +34,9 @@ Re.cycle adalah sebuah platform yang memberikan informasi terkait daur ulang sam
 6. Event Page - Detail & Forum Event
 
 ## 💱 Alur pengintegrasian dengan web service 💱
-◽ Mendefinisikan model class sesuai dengan response data yang akan diambil ketika melakukan pemanggilan *web service*.
+◽ Mendefinisikan model class sesuai dengan response data yang akan diambil ketika melakukan pemanggilan *web service*. Dalam hal ini, pendefinisian model akan disesuaikan dengan modul yang diimplementasikan per anggota kelompok.
 
-◽ Menambahkan *keyword* `required` pada setiap parameter class pada bagian constructor.
+◽ Menambahkan *keyword* `required` pada setiap parameter class pada bagian constructor sehingga terbentuk sebuah model yang merupakan suatu model yang merepresentasikan response dari pemanggilan *web service*.
 
 ◽ Membuat fungsi untuk melakukan fetching data dari web service kemudian mengiterasi serta menampilkan setiap data ke aplikasi dengan memanfaatkan FutureBuilder.
 
