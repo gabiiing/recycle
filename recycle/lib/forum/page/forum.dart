@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:recycle/forum/model/event_model.dart';
-import 'package:recycle/forum/function/event_fetch.dart';
-import 'package:recycle/forum/function/comment_fetch.dart';
+import 'package:recycle/forum/function/functions.dart';
 
 class Forum extends StatefulWidget {
   final int id;
   const Forum({Key? key, required this.id}) : super(key: key);
 
   @override
-  _ForumState createState() => _ForumState();
+  State<Forum> createState() => _ForumState();
 }
 
 class _ForumState extends State<Forum> {
@@ -17,8 +15,7 @@ class _ForumState extends State<Forum> {
   String startDate = "loading...";
   String finishDate = "loading...";
   String description = "loading...";
-  List<GlobalKey<FormState>> formKey = [];
-  String commentText = "";
+  List<String> commentText = [];
 
   @override
   void initState() {
@@ -85,7 +82,6 @@ class _ForumState extends State<Forum> {
                     FutureBuilder(
                         future: fetchComment(widget.id),
                         builder: (context, AsyncSnapshot snapshot) {
-                          formKey = [];
                           if (snapshot.data == null) {
                             return const Center(
                                 child: CircularProgressIndicator());
@@ -102,18 +98,18 @@ class _ForumState extends State<Forum> {
                               );
                             } else {
                               for (int i = 1; i <= snapshot.data!.length; i++) {
-                                formKey.add(GlobalKey<FormState>());
+                                commentText.add("");
                               }
                               return ListView.builder(
                                   scrollDirection: Axis.vertical,
                                   shrinkWrap: true,
                                   itemCount: snapshot.data!.length,
                                   itemBuilder: (_, index) => Container(
-                                        margin: const EdgeInsets.symmetric(
-                                            horizontal: 16, vertical: 12),
+                                    margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                                         padding: const EdgeInsets.all(20.0),
                                         decoration: const BoxDecoration(
                                             color: Colors.blue),
+                                    child: Form(
                                         child: ListTile(
                                           title: Text(
                                             snapshot
@@ -124,8 +120,7 @@ class _ForumState extends State<Forum> {
                                           trailing: Text(
                                               "Comment ID: ${snapshot.data![index].pk}"),
                                           subtitle: Padding(
-                                              padding: const EdgeInsets.only(
-                                                  top: 8.0),
+                                              padding: const EdgeInsets.only(top: 8.0),
                                               child: Align(
                                                   alignment:
                                                       Alignment.centerLeft,
@@ -148,10 +143,19 @@ class _ForumState extends State<Forum> {
                                                         ),
                                                         onChanged: (String? value) {
                                                           setState(() {
-                                                            if (value != null) {
-                                                              commentText = value;
-                                                            }
+                                                            commentText[index] = value!;
                                                           });
+                                                        },
+                                                        onSaved: (String? value) {
+                                                          setState(() {
+                                                            commentText[index] = value!;
+                                                          });
+                                                        },
+                                                        validator: (String? value) {
+                                                          if (value == null || value.isEmpty) {
+                                                            return 'Comment must not be empty.';
+                                                          }
+                                                          return null;
                                                         },
                                                       ),
                                                       TextButton(
@@ -159,7 +163,12 @@ class _ForumState extends State<Forum> {
                                                           backgroundColor:
                                                               MaterialStateProperty.all(Colors.green),
                                                         ),
-                                                        onPressed: () {},
+                                                        onPressed: () {
+                                                          if(commentText[index].isNotEmpty){
+                                                            addComment(widget.id, index, commentText[index]);
+                                                            setState((){});
+                                                          }
+                                                        },
                                                         child: const Text(
                                                           "Submit",
                                                           style: TextStyle(
@@ -170,7 +179,7 @@ class _ForumState extends State<Forum> {
                                                     ],
                                                   ))),
                                         ),
-                                      ));
+                                      )));
                             }
                           }
                         })
