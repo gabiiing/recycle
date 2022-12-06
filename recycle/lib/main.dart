@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recycle/drawer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -109,7 +110,9 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
+      drawer:
+          const ExternalDrawer(), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
