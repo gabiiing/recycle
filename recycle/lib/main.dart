@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recycle/forum/page/forum.dart';
 import 'package:recycle/drawer.dart';
 
 void main() {
@@ -107,7 +108,14 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    Forum(id:11)),
+          );
+        },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
