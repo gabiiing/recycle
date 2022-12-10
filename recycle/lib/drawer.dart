@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:recycle/Authentication/page/authentication.dart';
 import 'package:recycle/main.dart';
 import 'package:recycle/drawer.dart';
+import 'package:recycle/event/page/event_your.dart';
 
 class ExternalDrawer extends StatefulWidget {
   const ExternalDrawer({super.key});
@@ -33,6 +34,15 @@ class _ExternalDrawer extends State<ExternalDrawer> {
                   context,
                   MaterialPageRoute(
                       builder: (context) => const AuthenticationPage()));
+            },
+          ),
+          ListTile(
+            title: const Text("Your Events"),
+            onTap: () {
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const YourEventPage()));
             },
           ),
         ],
