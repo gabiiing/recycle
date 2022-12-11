@@ -123,8 +123,7 @@ class _ForumState extends State<Forum> {
                           ),
                           onPressed: () {
                             if (commentText.isNotEmpty) {
-                              addComment(request, widget.id, 0, commentText);
-                              setState(() {});
+                              addComment(request, widget.id, 0, commentText).then((value) => setState(() {}));
                             }
                           },
                           child: const Text(
