@@ -35,12 +35,12 @@ Future<List<Comment>> fetchComment(int id) async {
 
 Future<dynamic> addComment(dynamic request, int eventIndex, int commentIndex,
     String commentText) async {
-  request.post(
+  await request.post(
       'https://pbp-d01.up.railway.app/forum/add/$eventIndex/$commentIndex/',
       {'comment_text': commentText});
 }
 
-void deleteComment(dynamic request, int commentIndex) async {
-  request
+Future<dynamic> deleteComment(dynamic request, int commentIndex) async {
+  await request
       .post('https://pbp-d01.up.railway.app/forum/delete/$commentIndex/', {});
 }
