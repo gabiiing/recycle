@@ -16,6 +16,7 @@ Future<Event> fetchEvent(int id) async {
 
 Future<List<Comment>> fetchComment(int id) async {
   var url = Uri.parse('https://pbp-d01.up.railway.app/forum/json/$id/');
+  await Future.delayed(const Duration(seconds: 1));
   var response = await http.get(url);
 
   // melakukan decode response menjadi bentuk json
@@ -34,12 +35,12 @@ Future<List<Comment>> fetchComment(int id) async {
 
 Future<dynamic> addComment(dynamic request, int eventIndex, int commentIndex,
     String commentText) async {
-  return await request.post(
+  request.post(
       'https://pbp-d01.up.railway.app/forum/add/$eventIndex/$commentIndex/',
       {'comment_text': commentText});
 }
 
 void deleteComment(dynamic request, int commentIndex) async {
-  await request
+  request
       .post('https://pbp-d01.up.railway.app/forum/delete/$commentIndex/', {});
 }
