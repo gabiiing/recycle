@@ -3,7 +3,7 @@ import 'package:recycle/Alfredo/pages/home_page.dart';
 import 'package:recycle/Authentication/page/login_page.dart';
 import 'package:recycle/main.dart';
 import 'package:recycle/drawer.dart';
-import 'package:recycle/event/page/event_your.dart';
+
 
 class ExternalDrawer extends StatefulWidget {
   const ExternalDrawer({super.key});
