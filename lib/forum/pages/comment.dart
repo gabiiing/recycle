@@ -140,8 +140,7 @@ class _CommentPageState extends State<CommentPage> {
                                                       request,
                                                       widget.id,
                                                       snapshot.data![index].pk,
-                                                      commentText[index]);
-                                                  setState(() {});
+                                                      commentText[index]).then((value) => setState(() {}));
                                                 }
                                               },
                                               child: const Text(
@@ -163,8 +162,7 @@ class _CommentPageState extends State<CommentPage> {
                                                 ),
                                                 onPressed: () {
                                                   deleteComment(request,
-                                                      snapshot.data![index].pk);
-                                                  setState(() {});
+                                                      snapshot.data![index].pk).then((value) => setState(() {}));
                                                 },
                                                 child: const Text(
                                                   'Delete',
