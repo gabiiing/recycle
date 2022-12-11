@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:recycle/forum/functions/functions.dart';
+import 'package:recycle/forum/pages/comment.dart';
 import 'package:provider/provider.dart';
 import 'package:pbp_django_auth/pbp_django_auth.dart';
-import 'package:recycle/forum/functions/functions.dart';
 
 class Forum extends StatefulWidget {
   final int id;
@@ -37,14 +38,14 @@ class _ForumState extends State<Forum> {
 
   @override
   Widget build(BuildContext context) {
+    String commentText = "";
     final request = context.watch<CookieRequest>();
-    final screenWidth=MediaQuery.of(context).size.width;
-    final screenHeight=MediaQuery.of(context).size.height;
 
     return Scaffold(
-        appBar: AppBar(title: Text("${title}")),
-        body: SingleChildScrollView(
-            child: Container(
+        appBar: AppBar(title: Text(title)),
+        body: Form(
+            child: SingleChildScrollView(
+                child: Container(
           padding: const EdgeInsets.all(20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -86,198 +87,51 @@ class _ForumState extends State<Forum> {
                     const Text("Description:",
                         style: TextStyle(fontWeight: FontWeight.bold)),
                     Text(description),
-                    FutureBuilder(
-                        future: fetchComment(widget.id),
-                        builder: (context, AsyncSnapshot snapshot) {
-                          if (snapshot.data == null) {
-                            return const Center(
-                                child: CircularProgressIndicator());
-                          } else {
-                            if (!snapshot.hasData) {
-                              return Column(
-                                children: const [
-                                  Text(
-                                    "There's no comment yet. Be the first to give a comment!",
-                                    style: TextStyle(
-                                        color: Color(0xff59A5D8), fontSize: 20),
-                                  ),
-                                ],
-                              );
-                            } else {
-                              for (int i = 1; i <= snapshot.data!.length; i++) {
-                                commentText.add("");
-                              }
-                              return ListView.builder(
-                                  scrollDirection: Axis.vertical,
-                                  shrinkWrap: true,
-                                  itemCount: snapshot.data!.length,
-                                  itemBuilder: (_, index) => Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          horizontal: 16, vertical: 12),
-                                      padding: const EdgeInsets.all(20.0),
-                                      decoration: BoxDecoration(
-                                          color: Colors.green[400],
-                                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                                          ),
-                                      child: Form(
-                                        child: ListTile(
-                                          title: Text(
-                                            snapshot
-                                                .data![index].fields.username,
-                                            style: const TextStyle(
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                          trailing: Text(
-                                              "Comment ID: ${snapshot.data![index].pk}"),
-                                          subtitle: DefaultTextStyle.merge(
-                                            style: TextStyle(color:Colors.black),
-                                            child: Padding(
-                                                padding: const EdgeInsets.only(
-                                                    top: 8.0),
-                                                child: Align(
-                                                    alignment:
-                                                        Alignment.centerLeft,
-                                                    child: Column(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .stretch,
-                                                      children: [
-                                                        Visibility(
-                                                            visible: snapshot
-                                                                        .data![
-                                                                            index]
-                                                                        .fields
-                                                                        .parentPk ==
-                                                                    null
-                                                                ? false
-                                                                : true,
-                                                            child: Padding(
-                                                              padding: EdgeInsets.only(bottom:snapshot
-                                                                        .data![
-                                                                            index]
-                                                                        .fields
-                                                                        .parentPk ==
-                                                                    null
-                                                                ? 0.0
-                                                                : 10.0),
-                                                              child: Text(
-                                                                  "Replying to ID: ${snapshot.data![index].fields.parentPk}"),
-                                                            )),
-                                                        Text(snapshot.data![index]
-                                                            .fields.commentText),
-                                                        Padding(
-                                                          padding: const EdgeInsets.only(top: 15.0, bottom:12.0),
-                                                          child: SizedBox(
-                                                            height: 40,
-                                                             child:TextFormField(
-                                                            decoration:
-                                                                const InputDecoration(
-                                                              hintText:
-                                                                  "Type here to reply to this comment",
-                                                              hintStyle: TextStyle(
-                                                                fontSize: 12
-                                                              ),
-                                                              border:
-                                                                  OutlineInputBorder(),
-                                                            ),
-                                                            style: TextStyle(
-                                                                fontSize: 12
-                                                              ),
-                                                            onChanged:
-                                                                (String? value) {
-                                                              setState(() {
-                                                                commentText[index] =
-                                                                    value!;
-                                                              });
-                                                            },
-                                                            onSaved:
-                                                                (String? value) {
-                                                              setState(() {
-                                                                commentText[index] =
-                                                                    value!;
-                                                              });
-                                                            },
-                                                            validator:
-                                                                (String? value) {
-                                                              if (value == null ||
-                                                                  value.isEmpty) {
-                                                                return 'Comment must not be empty.';
-                                                              }
-                                                              return null;
-                                                            },
-                                                          ),
-                                                        ),),
-                                                        Row(
-                                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                         children:[ 
-                                                        TextButton(
-                                                          style: ButtonStyle(
-                                                            backgroundColor:
-                                                                MaterialStateProperty
-                                                                    .all(Colors
-                                                                        .blue),
-                                                          ),
-                                                          onPressed: () {
-                                                            if (commentText[index]
-                                                                .isNotEmpty) {
-                                                              addComment(
-                                                                  request,
-                                                                  widget.id,
-                                                                  snapshot
-                                                                      .data![
-                                                                          index]
-                                                                      .pk,
-                                                                  commentText[
-                                                                      index]);
-                                                              setState(() {});
-                                                            }
-                                                          },
-                                                          child: const Text(
-                                                            "Submit",
-                                                            style: TextStyle(
-                                                                color:
-                                                                    Colors.white),
-                                                          ),
-                                                        ),
-                                                        Visibility(
-                                                          visible: request.jsonData["username"]==snapshot.data![index].fields.username,
-                                                          child: TextButton(
-                                                            style: ButtonStyle(
-                                                              backgroundColor:
-                                                                  MaterialStateProperty
-                                                                      .all(Colors
-                                                                          .red),
-                                                            ),
-                                                            onPressed: () {
-                                                              deleteComment(
-                                                                  request,
-                                                                  snapshot
-                                                                      .data![
-                                                                          index]
-                                                                      .pk);
-                                                              setState(() {});
-                                                            },
-                                                            child: const Text(
-                                                              'Delete',
-                                                              style: TextStyle(
-                                                                  color: Colors
-                                                                      .white),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    )]),)),
-                                          ),
-                                        ),
-                                      )));
+                    Padding(
+                      padding: const EdgeInsets.only(top: 15.0, bottom: 12.0),
+                      child: SizedBox(
+                        height: 40,
+                        child: TextFormField(
+                          initialValue: commentText,
+                          decoration: const InputDecoration(
+                            hintText: "Type here to add a new comment",
+                            hintStyle: TextStyle(fontSize: 12),
+                            border: OutlineInputBorder(),
+                          ),
+                          style: const TextStyle(fontSize: 12),
+                          onChanged: (String? value) {
+                            commentText = value!;
+                          },
+                          validator: (String? value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Comment must not be empty.';
                             }
-                          }
-                        })
+                            return null;
+                          },
+                        ),
+                      ),
+                    ),
+                    TextButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(Colors.blue),
+                      ),
+                      onPressed: () {
+                        if (commentText.isNotEmpty) {
+                          addComment(request, widget.id, 0, commentText);
+                          setState(() {});
+                        }
+                      },
+                      child: const Text(
+                        "Submit",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                    CommentPage(id: widget.id),
                   ],
                 ),
               ),
             ],
           ),
-        )));
+        ))));
   }
 }
