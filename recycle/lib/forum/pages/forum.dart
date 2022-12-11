@@ -18,7 +18,7 @@ class _ForumState extends State<Forum> {
   String startDate = "loading...";
   String finishDate = "loading...";
   String description = "loading...";
-  List<String> commentText = [];
+  final _formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
@@ -44,94 +44,100 @@ class _ForumState extends State<Forum> {
     return Scaffold(
         appBar: AppBar(title: Text(title)),
         body: Form(
+            key: _formKey,
             child: SingleChildScrollView(
                 child: Container(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Align(
-                alignment: Alignment.center,
-                child: Column(
-                  children: [
-                    RichText(
-                      text: TextSpan(
-                        children: <TextSpan>[
-                          const TextSpan(
-                              text: 'Created by: ',
-                              style: TextStyle(fontWeight: FontWeight.bold)),
-                          TextSpan(text: username),
-                        ],
-                      ),
-                    ),
-                    RichText(
-                      text: TextSpan(
-                        children: <TextSpan>[
-                          const TextSpan(
-                              text: 'Start time: ',
-                              style: TextStyle(fontWeight: FontWeight.bold)),
-                          TextSpan(text: startDate),
-                        ],
-                      ),
-                    ),
-                    RichText(
-                      text: TextSpan(
-                        children: <TextSpan>[
-                          const TextSpan(
-                              text: 'End time: ',
-                              style: TextStyle(fontWeight: FontWeight.bold)),
-                          TextSpan(text: finishDate),
-                        ],
-                      ),
-                    ),
-                    const Text("Description:",
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                    Text(description),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 15.0, bottom: 12.0),
-                      child: SizedBox(
-                        height: 40,
-                        child: TextFormField(
-                          initialValue: commentText,
-                          decoration: const InputDecoration(
-                            hintText: "Type here to add a new comment",
-                            hintStyle: TextStyle(fontSize: 12),
-                            border: OutlineInputBorder(),
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Align(
+                    alignment: Alignment.center,
+                    child: Column(
+                      children: [
+                        RichText(
+                          text: TextSpan(
+                            children: <TextSpan>[
+                              const TextSpan(
+                                  text: 'Created by: ',
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.bold)),
+                              TextSpan(text: username),
+                            ],
                           ),
-                          style: const TextStyle(fontSize: 12),
-                          onChanged: (String? value) {
-                            commentText = value!;
-                          },
-                          validator: (String? value) {
-                            if (value == null || value.isEmpty) {
-                              return 'Comment must not be empty.';
-                            }
-                            return null;
-                          },
                         ),
-                      ),
+                        RichText(
+                          text: TextSpan(
+                            children: <TextSpan>[
+                              const TextSpan(
+                                  text: 'Start time: ',
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.bold)),
+                              TextSpan(text: startDate),
+                            ],
+                          ),
+                        ),
+                        RichText(
+                          text: TextSpan(
+                            children: <TextSpan>[
+                              const TextSpan(
+                                  text: 'End time: ',
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.bold)),
+                              TextSpan(text: finishDate),
+                            ],
+                          ),
+                        ),
+                        const Text("Description:",
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        Text(description),
+                        Padding(
+                          padding:
+                              const EdgeInsets.only(top: 15.0, bottom: 12.0),
+                          child: SizedBox(
+                            height: 40,
+                            child: TextFormField(
+                              initialValue: commentText,
+                              decoration: const InputDecoration(
+                                hintText: "Type here to add a new comment",
+                                hintStyle: TextStyle(fontSize: 12),
+                                border: OutlineInputBorder(),
+                              ),
+                              style: const TextStyle(fontSize: 12),
+                              onChanged: (String? value) {
+                                commentText = value!;
+                              },
+                              validator: (String? value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Comment must not be empty.';
+                                }
+                                return null;
+                              },
+                            ),
+                          ),
+                        ),
+                        TextButton(
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(Colors.blue),
+                          ),
+                          onPressed: () {
+                            if (commentText.isNotEmpty) {
+                              addComment(request, widget.id, 0, commentText);
+                              setState(() {});
+                            }
+                          },
+                          child: const Text(
+                            "Submit",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                        CommentPage(id: widget.id),
+                      ],
                     ),
-                    TextButton(
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(Colors.blue),
-                      ),
-                      onPressed: () {
-                        if (commentText.isNotEmpty) {
-                          addComment(request, widget.id, 0, commentText);
-                          setState(() {});
-                        }
-                      },
-                      child: const Text(
-                        "Submit",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                    CommentPage(id: widget.id),
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ],
-          ),
-        ))));
+            ))));
   }
 }

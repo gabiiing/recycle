@@ -4,8 +4,6 @@ import 'package:pbp_django_auth/pbp_django_auth.dart';
 import 'package:recycle/forum/functions/functions.dart';
 import '../models/comment_model.dart';
 
-Future<List<Comment>> commentData = Future.value([]);
-
 class CommentPage extends StatefulWidget {
   final int id;
   const CommentPage({Key? key, required this.id}) : super(key: key);
@@ -18,20 +16,13 @@ class _CommentPageState extends State<CommentPage> {
   List<String> commentText = [];
 
   @override
-  void initState() {
-    super.initState();
-    commentData = fetchComment(widget.id);
-  }
-
-  @override
   Widget build(BuildContext context) {
     final request = context.watch<CookieRequest>();
     List<String> commentText = [];
-    commentData = fetchComment(widget.id);
     final screenHeight = MediaQuery.of(context).size.height;
 
     return FutureBuilder(
-        future: commentData,
+        future: fetchComment(widget.id),
         builder: (context, AsyncSnapshot snapshot) {
           if (snapshot.connectionState != ConnectionState.done) {
             return Padding(
@@ -40,13 +31,12 @@ class _CommentPageState extends State<CommentPage> {
             );
           } else {
             if (!snapshot.hasData) {
-              return Column(
-                children: const [
-                  Text(
-                    "There's no comment yet. Be the first to give a comment!",
-                    style: TextStyle(color: Color(0xff59A5D8), fontSize: 20),
-                  ),
-                ],
+              return Padding(
+                padding: EdgeInsets.only(top: screenHeight * 0.2),
+                child: const Text(
+                  "There's no comment yet. Be the first to give a comment!",
+                  style: TextStyle(color: Colors.green, fontSize: 20),
+                ),
               );
             } else {
               commentText = [];
