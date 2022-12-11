@@ -2,8 +2,6 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:recycle/forum/models/event_model.dart';
 import 'package:recycle/forum/models/comment_model.dart';
-import 'package:pbp_django_auth/pbp_django_auth.dart';
-import 'package:recycle/forum/functions/functions.dart';
 
 Future<Event> fetchEvent(int id) async {
   var url = Uri.parse('https://pbp-d01.up.railway.app/forum/json/event/$id/');
@@ -34,13 +32,14 @@ Future<List<Comment>> fetchComment(int id) async {
   return listComment;
 }
 
-void addComment(dynamic request, int eventIndex, int commentIndex,
+Future<dynamic> addComment(dynamic request, int eventIndex, int commentIndex,
     String commentText) async {
-
-  await request.post('https://pbp-d01.up.railway.app/forum/add/${eventIndex}/${commentIndex}/', {'comment_text': commentText});
+  return await request.post(
+      'https://pbp-d01.up.railway.app/forum/add/$eventIndex/$commentIndex/',
+      {'comment_text': commentText});
 }
 
 void deleteComment(dynamic request, int commentIndex) async {
-
-  await request.post('https://pbp-d01.up.railway.app/forum/delete/${commentIndex}/', {});
+  await request
+      .post('https://pbp-d01.up.railway.app/forum/delete/$commentIndex/', {});
 }
