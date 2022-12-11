@@ -9,6 +9,7 @@ Map<String, dynamic>? userData = {
   "status": false,
   "username": "",
   "idUser": -1,
+  "isSuperuser": false,
 };
 
 class LoginPage extends StatefulWidget {
@@ -202,6 +203,8 @@ class _LoginPageState extends State<LoginPage> {
                                                     value['status'];
                                                 userData?['idUser'] =
                                                     value['idUser'];
+                                                userData?['isSuperuser'] =
+                                                    value['isSuperuser'];
                                                 Navigator.pop(context);
                                                 Navigator.pushReplacement(
                                                   context,
