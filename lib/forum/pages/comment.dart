@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:pbp_django_auth/pbp_django_auth.dart';
 import 'package:recycle/forum/functions/functions.dart';
-import '../models/comment_model.dart';
 
 class CommentPage extends StatefulWidget {
   final int id;
@@ -137,10 +136,13 @@ class _CommentPageState extends State<CommentPage> {
                                                 if (commentText[index]
                                                     .isNotEmpty) {
                                                   addComment(
-                                                      request,
-                                                      widget.id,
-                                                      snapshot.data![index].pk,
-                                                      commentText[index]).then((value) => setState(() {}));
+                                                          request,
+                                                          widget.id,
+                                                          snapshot
+                                                              .data![index].pk,
+                                                          commentText[index])
+                                                      .then((value) =>
+                                                          setState(() {}));
                                                 }
                                               },
                                               child: const Text(
@@ -161,8 +163,12 @@ class _CommentPageState extends State<CommentPage> {
                                                           Colors.red),
                                                 ),
                                                 onPressed: () {
-                                                  deleteComment(request,
-                                                      snapshot.data![index].pk).then((value) => setState(() {}));
+                                                  deleteComment(
+                                                          request,
+                                                          snapshot
+                                                              .data![index].pk)
+                                                      .then((value) =>
+                                                          setState(() {}));
                                                 },
                                                 child: const Text(
                                                   'Delete',
