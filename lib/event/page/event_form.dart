@@ -36,9 +36,9 @@ class _EventFormState extends State<EventForm> {
       drawer: const ExternalDrawer(),
       body: Form(
         key: _EventFormKey,
-        child: SingleChildScrollView(
-          child: Container(
-            padding: EdgeInsets.all(20.0),
+        child: Container(
+          padding: EdgeInsets.all(20.0),
+          child: SingleChildScrollView(
             child: Column(
               children: [
                 // make text "Create event" in the center

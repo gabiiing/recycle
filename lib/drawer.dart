@@ -4,6 +4,7 @@ import 'package:recycle/adminpage/pages/adminpage.dart';
 import 'package:recycle/Authentication/page/login_page.dart';
 import 'package:recycle/main.dart';
 import 'package:recycle/drawer.dart';
+import 'package:recycle/aboutus/pages/about_us.dart';
 import 'event/page/event_your.dart';
 import 'event/page/event_form.dart';
 import 'event/page/event_dashboard.dart';
@@ -32,6 +33,20 @@ class _ExternalDrawer extends State<ExternalDrawer> {
           ),
           ListTile(
             title: const Text("Event Page"),
+            onTap: () {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => const EventForm()));
+            },
+          ),
+          ListTile(
+            title: const Text("Meet Our Team"),
+            onTap: () {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => const AboutUsPage()));
+            },
+          ), 
+          ListTile(
+            title: const Text("Meet Our Team"),
             onTap: () {
               Navigator.pushReplacement(
                   context,
