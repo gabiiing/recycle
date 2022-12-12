@@ -7,29 +7,26 @@ import 'package:recycle/event/page/event_form.dart';
 import 'package:recycle/forum/pages/forum.dart';
 import '../utils/styles/app_styles.dart';
 
-class YourEventPage extends StatefulWidget {
-  const YourEventPage({super.key});
+class OngoingEventPage extends StatefulWidget {
+  const OngoingEventPage({super.key});
 
   @override
-  State<StatefulWidget> createState() => _YourEventPage();
+  State<StatefulWidget> createState() => _OngoingEventPage();
 }
 
-class _YourEventPage extends State<YourEventPage> {
+class _OngoingEventPage extends State<OngoingEventPage> {
   late EventMethod data;
   late Future<List<Event>> _event;
-  
   @override
   void initState() {
     super.initState();
     setState(() {
       data = EventMethod();
-      _event = data.getMyEvents(userData!['idUser']);
+      _event = data.getOngoingEvents();
     });
   }
 
- 
   Widget buildTextButton(int index, int id) {
-    
     return TextButton(
       onPressed: () {
         deleteEvent(id).then((value) => setState(
@@ -46,7 +43,7 @@ class _YourEventPage extends State<YourEventPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Your Events"),
+        title: const Text("Ongoing Events"),
       ),
       drawer: const ExternalDrawer(),
       body: FutureBuilder<List<Event>>(
@@ -54,7 +51,7 @@ class _YourEventPage extends State<YourEventPage> {
         builder: (context, AsyncSnapshot snapshot) {
           if (snapshot.hasData) {
             if (snapshot.data.length == 0) {
-              return Center(child: const Text("Anda belum menambahkan event"));
+              return Center(child: const Text("Belum ada Event yang berjalan"));
             }
             return ListView.builder(
               itemCount: snapshot.data!.length,
@@ -114,24 +111,10 @@ class _YourEventPage extends State<YourEventPage> {
                       ),
                     ),
                   ),
-                  title: Text(
-                    item.fields.title,
-                    style: Styles.h2,
-                  ),
-                  subtitle: Text(
-                      item.fields.brief +
-                          "\n\n" +
-                          "Mulai :" +
-                          tanggal +
-                          "\t" +
-                          jam +
-                          "\nSelesai :" +
-                          tanggalf +
-                          "\t" +
-                          jamf,
-                      style: Styles.h4),
+                  title: Text(item.fields.title, style: Styles.h2,),
+                  subtitle: Text(item.fields.brief+ "\n\n"+ "Mulai :" + tanggal + "\t" + jam+ "\nSelesai :" + tanggalf + "\t" + jamf, style: Styles.h4 ),
                   trailing: Visibility(
-                    visible: true,
+                    visible: userData!['isSuperuser'],
                     child: buildTextButton(index, item.pk),
                   ),
                   onTap: () {
@@ -169,14 +152,6 @@ class _YourEventPage extends State<YourEventPage> {
                   },
                   child: const Icon(Icons.arrow_back_ios),
                 )),
-            Expanded(child: Container()),
-            FloatingActionButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const EventForm()));
-              },
-              child: const Icon(Icons.add),
-            )
           ],
         ),
       ),
