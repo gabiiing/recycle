@@ -39,8 +39,14 @@ class _AboutUsPageState extends State<AboutUsPage> {
                 ),
               ),
               CircleAvatar(
-                  radius: 70,
-                  backgroundImage: AssetImage('assets/images/1208307.jpg')),
+                backgroundColor: Colors.greenAccent[400],
+                radius: 70,
+                child: GlowText(
+                  'Re.Cycle',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+              ),
               GlowText(
                 'Muflih',
                 textAlign: TextAlign.center,
@@ -78,8 +84,14 @@ class _AboutUsPageState extends State<AboutUsPage> {
                 ),
               ),
               CircleAvatar(
-                  radius: 70,
-                  backgroundImage: AssetImage('assets/images/1208307.jpg')),
+                backgroundColor: Colors.greenAccent[400],
+                radius: 70,
+                child: GlowText(
+                  'Re.Cycle',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+              ),
               GlowText(
                 'Alifia',
                 textAlign: TextAlign.center,
@@ -117,8 +129,14 @@ class _AboutUsPageState extends State<AboutUsPage> {
                 ),
               ),
               CircleAvatar(
-                  radius: 70,
-                  backgroundImage: AssetImage('assets/images/1208307.jpg')),
+                backgroundColor: Colors.greenAccent[400],
+                radius: 70,
+                child: GlowText(
+                  'Re.Cycle',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+              ),
               GlowText(
                 'Edo',
                 textAlign: TextAlign.center,
@@ -156,8 +174,14 @@ class _AboutUsPageState extends State<AboutUsPage> {
                 ),
               ),
               CircleAvatar(
-                  radius: 70,
-                  backgroundImage: AssetImage('assets/images/1208307.jpg')),
+                backgroundColor: Colors.greenAccent[400],
+                radius: 70,
+                child: GlowText(
+                  'Re.Cycle',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+              ),
               GlowText(
                 'Febi',
                 textAlign: TextAlign.center,
@@ -195,8 +219,14 @@ class _AboutUsPageState extends State<AboutUsPage> {
                 ),
               ),
               CircleAvatar(
-                  radius: 70,
-                  backgroundImage: AssetImage('assets/images/1208307.jpg')),
+                backgroundColor: Colors.greenAccent[400],
+                radius: 70,
+                child: GlowText(
+                  'Re.Cycle',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+              ),
               GlowText(
                 'Gabing',
                 textAlign: TextAlign.center,
@@ -234,8 +264,14 @@ class _AboutUsPageState extends State<AboutUsPage> {
                 ),
               ),
               CircleAvatar(
-                  radius: 70,
-                  backgroundImage: AssetImage('assets/images/1208307.jpg')),
+                backgroundColor: Colors.greenAccent[400],
+                radius: 70,
+                child: GlowText(
+                  'Re.Cycle',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+              ),
               GlowText(
                 'Sayyid',
                 textAlign: TextAlign.center,

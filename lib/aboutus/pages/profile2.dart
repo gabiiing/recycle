@@ -27,8 +27,14 @@ class _Profile2PageState extends State<Profile2Page> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
-                  radius: 100,
-                  backgroundImage: AssetImage('assets/images/1208307.jpg')),
+                backgroundColor: Colors.greenAccent[400],
+                radius: 100,
+                child: GlowText(
+                  'Re.Cycle',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+              ),
               Text(
                 textAlign: TextAlign.center,
                 'Shafanisa Alifia Suparno',
@@ -82,7 +88,7 @@ class _Profile2PageState extends State<Profile2Page> {
                   ),
                   title: Text(
                     textAlign: TextAlign.center,
-                    'Shafanisalifia28@gmail.com',
+                    'shafanisalifia28@gmail.com',
                     style: TextStyle(
                       fontFamily: 'SourceSansPro',
                       color: Color.fromARGB(255, 51, 58, 52),
@@ -135,7 +141,7 @@ class _Profile2PageState extends State<Profile2Page> {
                           color: Color.fromARGB(255, 1, 45, 2),
                         ),
                       ),
-                      child: const GlowText(' See Profile'))),
+                      child: const GlowText('Previous Page'))),
             ],
           ),
         ),
