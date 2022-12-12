@@ -95,6 +95,7 @@ flutter:
   assets:
     - assets/images/asset1.png    
     - assets/Recycle-icon.png
+    - assets/images/1208307.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
