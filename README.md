@@ -18,7 +18,10 @@ Tugas Kelompok dibuat oleh kelompok DO1 yang beranggotakan sebagai berikut.
 
 ## :rocket: [Link Railway](https://pbp-d01.up.railway.app/)
 
-## 🦋 [Link APK](https://install.appcenter.ms/orgs/recycle-pbp/apps/recycle/distribution_groups/public)
+## 🦋 Link APK
+
+[*Release* melalui GitHub](https://github.com/gabiiing/recycle/releases)
+[*Release* melalui App Center (Cloud Platform](https://install.appcenter.ms/orgs/recycle-pbp/apps/recycle/distribution_groups/public)
 
 ## 📲 Deskripsi Aplikasi 📲
 ◽ **Nama aplikasi :** **re.cycle**
