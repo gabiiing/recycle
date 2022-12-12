@@ -175,30 +175,6 @@ class _AdminPageState extends State<AdminPage> {
                               },
                             ),
                           ),
-                          Padding(
-                            // Input type
-                            padding: const EdgeInsets.all(8.0),
-                            child: DropdownButton(
-                              value: 'app',
-                              hint: const Text("Feedback Type"),
-                              icon: const Icon(Icons.keyboard_arrow_down),
-                              items: const <DropdownMenuItem<String>>[
-                                DropdownMenuItem<String>(
-                                  value: 'app',
-                                  child: Text('App Feedback'),
-                                ),
-                                DropdownMenuItem<String>(
-                                  value: 'event',
-                                  child: Text('Event Feedback'),
-                                ),
-                              ],
-                              onChanged: (String? value) {
-                                setState(() {
-                                  _type = value ?? "";
-                                });
-                              },
-                            ),
-                          ),
                           ElevatedButton(
                               child: const Text(
                                 "Submit",
