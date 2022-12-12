@@ -7,7 +7,7 @@ import 'package:pbp_django_auth/pbp_django_auth.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:recycle/drawer.dart';
-import 'package:recycle/Alfredo/widgets/CustomAppBar.dart';
+import 'package:recycle/Alfredo/widgets/customAppBar.dart';
 import 'package:recycle/event/page/event_dashboard.dart';
 
 class EventForm extends StatefulWidget {
