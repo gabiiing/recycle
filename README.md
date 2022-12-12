@@ -1,3 +1,8 @@
+[![Build status](https://build.appcenter.ms/v0.1/apps/3755a6dc-e99d-4b1b-9a00-c9ea2a991c32/branches/main/badge)](https://appcenter.ms)
+![Staging](https://github.com/gabiiing/recycle/actions/workflows/staging.yml/badge.svg)
+![Pre-release](https://github.com/gabiiing/recycle/actions/workflows/pre-release.yml/badge.svg)
+![Release](https://github.com/gabiiing/recycle/actions/workflows/release.yml/badge.svg)
+
 <div align="center" style="padding-bottom: 10px">
 <h1>🎐Tugas Kelompok PBP-D UAS Kelompok D01 T.A. 2022/2023🎐</h1>
 </div>
@@ -11,7 +16,12 @@ Tugas Kelompok dibuat oleh kelompok DO1 yang beranggotakan sebagai berikut.
 - Gabriel Zebaoth Krisopras Putra - 2106751480
 - Sayyid Hafidzurrahman Atstsaqofi - 2106651925
 
-## :rocket: [Railway Link](https://pbp-d01.up.railway.app/)
+## :rocket: [Link Railway](https://pbp-d01.up.railway.app/)
+
+## 🦋 Link APK
+
+[*Release* melalui GitHub](https://github.com/gabiiing/recycle/releases) <br />
+[*Release* melalui App Center (Cloud Platform)](https://install.appcenter.ms/orgs/recycle-pbp/apps/recycle/distribution_groups/public)
 
 ## 📲 Deskripsi Aplikasi 📲
 ◽ **Nama aplikasi :** **re.cycle**
