@@ -53,7 +53,7 @@ class _AdminPageState extends State<AdminPage> {
                           ),
                           Column(
                             children: [
-                              Image.asset('assests/images/asset1.png'),
+                              Image.asset('assets/images/asset1.png'),
                             ],
                           ),
                           ListTile(

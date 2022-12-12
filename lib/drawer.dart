@@ -8,6 +8,7 @@ import 'event/page/event_your.dart';
 import 'event/page/event_form.dart';
 import 'event/page/event_dashboard.dart';
 
+
 class ExternalDrawer extends StatefulWidget {
   const ExternalDrawer({super.key});
 
@@ -39,23 +40,15 @@ class _ExternalDrawer extends State<ExternalDrawer> {
             },
 
           ),        
-          ListTile(
-            title: const Text("Create Event"),
-            onTap: () {
-              Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const EventForm()));
-
-            },
-          ),
-          ListTile(
-            title: const Text("Admin Page"),
-            onTap: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) => const AdminPage()));
-            }
-          )
+          if (userData!['isSuperuser'])
+            ListTile(
+                title: const Text("Admin Page"),
+                onTap: () {
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AdminPage()));
+                })
         ],
       ),
     );
