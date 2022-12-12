@@ -27,8 +27,14 @@ class _Profile4PageState extends State<Profile4Page> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
-                  radius: 100,
-                  backgroundImage: AssetImage('assets/images/1208307.jpg')),
+                backgroundColor: Colors.greenAccent[400],
+                radius: 100,
+                child: GlowText(
+                  'Re.Cycle',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+              ),
               Text(
                 textAlign: TextAlign.center,
                 'Febi Claudia Damanik',

@@ -31,9 +31,22 @@ class _AboutUsPageState extends State<AboutUsPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              SizedBox(
+                height: 20,
+                width: 150,
+                child: Divider(
+                  color: Color.fromARGB(255, 114, 196, 100),
+                ),
+              ),
               CircleAvatar(
-                  radius: 70,
-                  backgroundImage: AssetImage('assets/images/1208307.jpg')),
+                backgroundColor: Colors.greenAccent[400],
+                radius: 70,
+                child: GlowText(
+                  'Re.Cycle',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+              ),
               GlowText(
                 'Muflih',
                 textAlign: TextAlign.center,
@@ -71,8 +84,14 @@ class _AboutUsPageState extends State<AboutUsPage> {
                 ),
               ),
               CircleAvatar(
-                  radius: 70,
-                  backgroundImage: AssetImage('assets/images/1208307.jpg')),
+                backgroundColor: Colors.greenAccent[400],
+                radius: 70,
+                child: GlowText(
+                  'Re.Cycle',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+              ),
               GlowText(
                 'Alifia',
                 textAlign: TextAlign.center,
@@ -110,8 +129,14 @@ class _AboutUsPageState extends State<AboutUsPage> {
                 ),
               ),
               CircleAvatar(
-                  radius: 70,
-                  backgroundImage: AssetImage('assets/images/1208307.jpg')),
+                backgroundColor: Colors.greenAccent[400],
+                radius: 70,
+                child: GlowText(
+                  'Re.Cycle',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+              ),
               GlowText(
                 'Edo',
                 textAlign: TextAlign.center,
@@ -149,8 +174,14 @@ class _AboutUsPageState extends State<AboutUsPage> {
                 ),
               ),
               CircleAvatar(
-                  radius: 70,
-                  backgroundImage: AssetImage('assets/images/1208307.jpg')),
+                backgroundColor: Colors.greenAccent[400],
+                radius: 70,
+                child: GlowText(
+                  'Re.Cycle',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+              ),
               GlowText(
                 'Febi',
                 textAlign: TextAlign.center,
@@ -188,8 +219,14 @@ class _AboutUsPageState extends State<AboutUsPage> {
                 ),
               ),
               CircleAvatar(
-                  radius: 70,
-                  backgroundImage: AssetImage('assets/images/1208307.jpg')),
+                backgroundColor: Colors.greenAccent[400],
+                radius: 70,
+                child: GlowText(
+                  'Re.Cycle',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+              ),
               GlowText(
                 'Gabing',
                 textAlign: TextAlign.center,
@@ -227,8 +264,14 @@ class _AboutUsPageState extends State<AboutUsPage> {
                 ),
               ),
               CircleAvatar(
-                  radius: 70,
-                  backgroundImage: AssetImage('assets/images/1208307.jpg')),
+                backgroundColor: Colors.greenAccent[400],
+                radius: 70,
+                child: GlowText(
+                  'Re.Cycle',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+              ),
               GlowText(
                 'Sayyid',
                 textAlign: TextAlign.center,
