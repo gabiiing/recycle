@@ -32,13 +32,6 @@ class _ExternalDrawer extends State<ExternalDrawer> {
             },
           ),
           ListTile(
-            title: const Text("Event Page"),
-            onTap: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) => const EventForm()));
-            },
-          ),
-          ListTile(
             title: const Text("Meet Our Team"),
             onTap: () {
               Navigator.pushReplacement(context,
@@ -46,7 +39,7 @@ class _ExternalDrawer extends State<ExternalDrawer> {
             },
           ), 
           ListTile(
-            title: const Text("Meet Our Team"),
+            title: const Text("Event Page"),
             onTap: () {
               Navigator.pushReplacement(
                   context,

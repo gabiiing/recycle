@@ -162,6 +162,7 @@ packages:
       name: gap
       url: "https://pub.dartlang.org"
     source: hosted
+    version: "2.0.1"
   http:
     dependency: "direct main"
     description:
