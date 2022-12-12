@@ -31,6 +31,13 @@ class _AboutUsPageState extends State<AboutUsPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              SizedBox(
+                height: 20,
+                width: 150,
+                child: Divider(
+                  color: Color.fromARGB(255, 114, 196, 100),
+                ),
+              ),
               CircleAvatar(
                   radius: 70,
                   backgroundImage: AssetImage('assets/images/1208307.jpg')),
