@@ -36,9 +36,9 @@ class _EventFormState extends State<EventForm> {
       drawer: const ExternalDrawer(),
       body: Form(
         key: _EventFormKey,
-        child: SingleChildScrollView(
-          child: Container(
-            padding: EdgeInsets.all(20.0),
+        child: Container(
+          padding: EdgeInsets.all(20.0),
+          child: SingleChildScrollView(
             child: Column(
               children: [
                 Padding(
@@ -160,26 +160,26 @@ class _EventFormState extends State<EventForm> {
                             .substring(0, 8);
                         print(date);
                         print(time);
-                        String sdate =date+ "T"+time;
+                        String sdate = date + "T" + time;
                         date = finished_date.toString().split(" ")[0];
                         time = finished_date
                             .toString()
                             .split(" ")[1]
                             .substring(0, 8);
-                        String fdate =date+ "T"+time;
+                        String fdate = date + "T" + time;
 
                         print(started_date.toString());
 
                         await request.post(
                             "https://pbp-d01.up.railway.app/event/add-event/", {
-                            // "http://127.0.0.1:8000/event/add-event/",
-                            // {
-                              "title": title,
-                              "brief": brief,
-                              "description": description,
-                              "start_date": sdate,
-                              "finish_date": fdate,
-                            }).then(
+                          // "http://127.0.0.1:8000/event/add-event/",
+                          // {
+                          "title": title,
+                          "brief": brief,
+                          "description": description,
+                          "start_date": sdate,
+                          "finish_date": fdate,
+                        }).then(
                           (value) {
                             return showDialog(
                                 context: context,

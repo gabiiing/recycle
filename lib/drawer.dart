@@ -3,10 +3,9 @@ import 'package:recycle/Alfredo/pages/home_page.dart';
 import 'package:recycle/Authentication/page/login_page.dart';
 import 'package:recycle/main.dart';
 import 'package:recycle/drawer.dart';
+import 'package:recycle/aboutus/pages/about_us.dart';
 import 'event/page/event_your.dart';
 import 'event/page/event_form.dart';
-
-
 
 class ExternalDrawer extends StatefulWidget {
   const ExternalDrawer({super.key});
@@ -41,10 +40,15 @@ class _ExternalDrawer extends State<ExternalDrawer> {
           ListTile(
             title: const Text("Create Event"),
             onTap: () {
-              Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const EventForm()));
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => const EventForm()));
+            },
+          ),
+          ListTile(
+            title: const Text("Meet Our Team"),
+            onTap: () {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => const AboutUsPage()));
             },
           ),
         ],
