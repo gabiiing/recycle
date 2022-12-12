@@ -38,13 +38,6 @@ class _FeedbackPage extends State<FeedbackPage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text(
-              "🏡 Feedback you've previously left for this site 🏡",
-              style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                  backgroundColor: Color.fromARGB(255, 215, 255, 217)),
-            ),
             FloatingActionButton(
               heroTag: "Go Back Button",
               onPressed: () {
