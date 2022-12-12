@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:recycle/Alfredo/pages/home_page.dart';
+import 'package:recycle/adminpage/pages/adminpage.dart';
 import 'package:recycle/Authentication/page/login_page.dart';
 import 'package:recycle/main.dart';
 import 'package:recycle/drawer.dart';
 import 'event/page/event_your.dart';
 import 'event/page/event_form.dart';
-
+import 'event/page/event_dashboard.dart';
 
 
 class ExternalDrawer extends StatefulWidget {
@@ -30,23 +31,24 @@ class _ExternalDrawer extends State<ExternalDrawer> {
             },
           ),
           ListTile(
-            title: const Text("Your Events"),
+            title: const Text("Event Page"),
             onTap: () {
               Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const YourEventPage()));
+                      builder: (context) => const EventDashboard()));
             },
-          ),
-          ListTile(
-            title: const Text("Create Event"),
-            onTap: () {
-              Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const EventForm()));
-            },
-          ),
+
+          ),        
+          if (userData!['isSuperuser'])
+            ListTile(
+                title: const Text("Admin Page"),
+                onTap: () {
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AdminPage()));
+                })
         ],
       ),
     );
