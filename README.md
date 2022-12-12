@@ -1,3 +1,8 @@
+[![Build status](https://build.appcenter.ms/v0.1/apps/3755a6dc-e99d-4b1b-9a00-c9ea2a991c32/branches/main/badge)](https://appcenter.ms)
+![Staging](https://github.com/gabiiing/recycle/actions/workflows/staging.yml/badge.svg)
+![Pre-release](https://github.com/gabiiing/recycle/actions/workflows/pre-release.yml/badge.svg)
+![Release](https://github.com/gabiiing/recycle/actions/workflows/release.yml/badge.svg)
+
 <div align="center" style="padding-bottom: 10px">
 <h1>🎐Tugas Kelompok PBP-D UAS Kelompok D01 T.A. 2022/2023🎐</h1>
 </div>
