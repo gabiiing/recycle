@@ -20,7 +20,7 @@ Tugas Kelompok dibuat oleh kelompok DO1 yang beranggotakan sebagai berikut.
 
 ## 🦋 Link APK
 
-[*Release* melalui GitHub](https://github.com/gabiiing/recycle/releases)
+[*Release* melalui GitHub](https://github.com/gabiiing/recycle/releases) <br />
 [*Release* melalui App Center (Cloud Platform](https://install.appcenter.ms/orgs/recycle-pbp/apps/recycle/distribution_groups/public)
 
 ## 📲 Deskripsi Aplikasi 📲
