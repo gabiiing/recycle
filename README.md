@@ -16,7 +16,9 @@ Tugas Kelompok dibuat oleh kelompok DO1 yang beranggotakan sebagai berikut.
 - Gabriel Zebaoth Krisopras Putra - 2106751480
 - Sayyid Hafidzurrahman Atstsaqofi - 2106651925
 
-## :rocket: [Railway Link](https://pbp-d01.up.railway.app/)
+## :rocket: [Link Railway](https://pbp-d01.up.railway.app/)
+
+## 🦋 [Link APK](https://install.appcenter.ms/orgs/recycle-pbp/apps/recycle/distribution_groups/public)
 
 ## 📲 Deskripsi Aplikasi 📲
 ◽ **Nama aplikasi :** **re.cycle**
