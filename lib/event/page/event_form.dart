@@ -4,9 +4,11 @@ import '../method/event_method.dart';
 import '../page/event_your.dart';
 import 'package:recycle/Authentication/page/login_page.dart';
 import 'package:pbp_django_auth/pbp_django_auth.dart';
-import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:recycle/drawer.dart';
+import 'package:recycle/Alfredo/widgets/customAppBar.dart';
+import 'package:recycle/event/page/event_dashboard.dart';
 
 class EventForm extends StatefulWidget {
   const EventForm({super.key});
@@ -30,9 +32,7 @@ class _EventFormState extends State<EventForm> {
   Widget build(BuildContext context) {
     final request = context.watch<CookieRequest>();
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Create Event"),
-      ),
+      appBar: const CustomAppBar(),
       drawer: const ExternalDrawer(),
       body: Form(
         key: _EventFormKey,
@@ -41,6 +41,17 @@ class _EventFormState extends State<EventForm> {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                // make text "Create event" in the center
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    "Create Event",
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
                 Padding(
                   padding: EdgeInsets.all(8.0),
                   child: TextFormField(
@@ -101,7 +112,7 @@ class _EventFormState extends State<EventForm> {
                 // make datetime picker
                 Padding(
                     padding: EdgeInsets.all(8.0),
-                    child: TextButton(
+                    child: OutlinedButton(
                         onPressed: () {
                           DatePicker.showDateTimePicker(context,
                               showTitleActions: true,
@@ -118,12 +129,13 @@ class _EventFormState extends State<EventForm> {
                               locale: LocaleType.id);
                         },
                         child: Text(
-                          'set started date',
-                          style: TextStyle(color: Colors.blue),
+                          'set start date',
+                          style: TextStyle(color: Colors.green),
                         ))),
+
                 Padding(
                     padding: EdgeInsets.all(8.0),
-                    child: TextButton(
+                    child: OutlinedButton(
                         onPressed: () {
                           DatePicker.showDateTimePicker(context,
                               showTitleActions: true,
@@ -140,9 +152,10 @@ class _EventFormState extends State<EventForm> {
                               locale: LocaleType.id);
                         },
                         child: Text(
-                          'set finished date',
-                          style: TextStyle(color: Colors.blue),
+                          'set finish date',
+                          style: TextStyle(color: Colors.green),
                         ))),
+
                 ElevatedButton(
                     child: Text(
                       "Create Event",
@@ -272,6 +285,15 @@ class _EventFormState extends State<EventForm> {
             ),
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) => YourEventPage()));
+        },
+        
+        child: Icon(Icons.arrow_back),
       ),
     );
   }

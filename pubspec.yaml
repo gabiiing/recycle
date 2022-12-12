@@ -44,6 +44,8 @@ dependencies:
   flutter_launcher_icons: ^0.11.0
   flutter_glow: ^0.2.0
   font_awesome_flutter: ^10.3.0
+  gap: ^2.0.1
+
 
   
 flutter_icons:
@@ -86,10 +88,14 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
+  # To add assets to your application, add an assets section, like this:   
+
   # assets:
   #   - assets/images/
-    
+  assets:
+    - assets/images/asset1.png    
+    - assets/Recycle-icon.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
