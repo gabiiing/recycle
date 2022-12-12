@@ -19,6 +19,8 @@ class _ForumState extends State<Forum> {
   String finishDate = "loading...";
   String description = "loading...";
   final _formKey = GlobalKey<FormState>();
+  String commentText = "";
+  final TextEditingController _controller = TextEditingController();
 
   @override
   void initState() {
@@ -34,12 +36,15 @@ class _ForumState extends State<Forum> {
         description = value.description;
       });
     });
+    _controller.addListener(() {
+      commentText = _controller.text;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    String commentText = "";
     final request = context.watch<CookieRequest>();
+    _controller.text = "";
 
     return Scaffold(
         appBar: AppBar(title: Text(title)),
@@ -97,7 +102,7 @@ class _ForumState extends State<Forum> {
                           child: SizedBox(
                             height: 40,
                             child: TextFormField(
-                              initialValue: commentText,
+                              controller: _controller,
                               decoration: const InputDecoration(
                                 hintText: "Type here to add a new comment",
                                 hintStyle: TextStyle(fontSize: 12),
@@ -122,8 +127,9 @@ class _ForumState extends State<Forum> {
                                 MaterialStateProperty.all(Colors.blue),
                           ),
                           onPressed: () {
-                            if (commentText.isNotEmpty) {
-                              addComment(request, widget.id, 0, commentText).then((value) => setState(() {}));
+                            if (_formKey.currentState!.validate()) {
+                              addComment(request, widget.id, 0, commentText)
+                                  .then((value) => setState(() {}));
                             }
                           },
                           child: const Text(
